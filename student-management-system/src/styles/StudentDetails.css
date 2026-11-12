@@ -1,0 +1,170 @@
+/* ==========================================================================
+   StudentDetails.css — Individual student profile card
+   ========================================================================== */
+
+.details-page {
+  max-width: 860px;
+}
+
+/* ---------- Back Button ---------- */
+.btn-back {
+  background: none;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+/* ---------- Details Card ---------- */
+.details-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* ---------- Card Header ---------- */
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  border-bottom: 1px solid #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  flex-wrap: wrap;
+}
+
+.details-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.details-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.details-header-info h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.dept-badge-lg {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-edit-profile {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-edit-profile:hover {
+  background-color: #1d4ed8;
+}
+
+/* ---------- Details Grid ---------- */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.detail-item {
+  padding: 20px 32px;
+  border-bottom: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+}
+
+.detail-item:nth-child(even) {
+  border-right: none;
+}
+
+.detail-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.detail-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.detail-value {
+  display: block;
+  font-size: 15px;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* ---------- Details Responsive ---------- */
+@media (max-width: 768px) {
+  .details-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-item {
+    border-right: none;
+    padding: 16px 20px;
+  }
+  .detail-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+}
